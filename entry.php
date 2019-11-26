@@ -1,6 +1,45 @@
 <?php
+require_once("funx.php");
+session_start();
+
+$entry = null;
+if(isset($_SESSION["entry"])){
+    $entry = $_SESSION["entry"];
+}else{
+    $entry = [];
+}
+$id = -1;
+if (isset($_REQUEST["id"])) {
+	$id = $_REQUEST["id"];
+}
+$mode = "";
+if (isset($_REQUEST["mode"])) {
+	$mode = $_REQUEST["mode"];
+}
+
+// リクエストパラメータに対応する楽器を取得
+if ($id > -1) {
+	$items = createItems();
+	$item = $items[$id];
+	// カートに選択された楽器を追加
+	$entry[] = $item;
+	// セッションに再設定する
+	$_SESSION["entry"] = $entry;
+}
+
+// カートのクリア処理
+if ($mode === "entry") {
+	$entry = [];
+	unset($_SESSION["entry"]);
+	session_destroy();
+}
+
+
 
 ?>
+
+
+
 <!DOCTYPE html>
 <html lang="ja">
 

@@ -61,6 +61,35 @@
 						<td><a href = "entry.php">カートに入れる</a></td>
 					</tr>
 				</table>
+				<h2>商品検索 - 検索結果</h2>
+				<h3>商品一覧</h3>
+				<table>
+				    <caption><a href="entry.php">検索画面に戻る</a> <a href ="entry.php">　カートの中身を見る</a></caption>
+				    <tr>
+				        <th>タイトル</th>
+				        <th>価格</th>
+				        <th>収録時間</th>
+				        
+				    </tr>
+				    <tr>
+				        <td>The Net</td>
+				        <td>500円</td>
+				        <td>114分</td>
+				        <td><a href = "entry.php">カートに入れる</a></td>
+				    </tr>
+				    <tr>
+				        <td>Star Wars: force Awakens</td>
+				        <td>2800円</td>
+				        <td>150分</td>
+				        <td><a href = "entry.php">カートに入れる</a></td>
+				    </tr>
+				    <tr>
+				        <td>Out break</td>
+				        <td>900円</td>
+				        <td>129分</td>
+				        <td><a href = "entry.php">カートに入れる</a></td>
+				    </tr>
+				</table>
 			</section>
 		</article>
 	</main>
